@@ -24,7 +24,7 @@
         <ul id="sortable">
             {% for participante in participantes %}
                 <li class="ui-state-default" value="{{participante.getId}}"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>{{participante.getNombre}}</li>
-                {% endfor %}
+            {% endfor %}
         </ul>
         <input type="text" name="usuarioId">
         <input type="hidden" name="participantesIds" id="participantesIds">
