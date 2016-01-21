@@ -236,6 +236,23 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'Ranking\\FrontBundle\\Controller\\DefaultController::indexAction',  '_route' => 'ranking_front_default_index',);
         }
 
+        if (0 === strpos($pathinfo, '/participante')) {
+            // participante
+            if (rtrim($pathinfo, '/') === '/participante') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'participante');
+                }
+
+                return array (  '_controller' => 'Ranking\\FrontBundle\\Controller\\ParticipanteController::indexAction',  '_route' => 'participante',);
+            }
+
+            // participante_update
+            if ($pathinfo === '/participante/update') {
+                return array (  '_controller' => 'Ranking\\FrontBundle\\Controller\\ParticipanteController::updateAction',  '_route' => 'participante_update',);
+            }
+
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }

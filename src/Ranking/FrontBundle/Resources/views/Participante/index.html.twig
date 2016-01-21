@@ -1,0 +1,33 @@
+{% extends 'RankingFrontBundle::base.html.twig' %}
+
+{% block content %}  
+    <script>
+        $(document).ready(function() {
+            $("#sortable").sortable({
+                update: function(event, ui) {
+                    var array = $(this).sortable('toArray', {attribute: 'value'});
+                    $('#participantesIds').val(array);
+                }
+            });
+            var array = $("#sortable").sortable('toArray', {attribute: 'value'});
+            $('#participantesIds').val(array);
+        })
+    </script>
+    <style>
+        h1 { text-align:center }
+        #sortable { list-style-type: none; margin: 0; padding: 0; width:30%; margin:auto; margin-top:20px; border:2px solid #CCC; cursor:pointer; }
+        #sortable li { padding:10px; }
+        #sortable li span { position: absolute; margin-left: -1.3em; }
+    </style>
+    <h1>Rankeani</h1>
+    <form action="{{ path('participante_update') }}" method="POST">
+        <ul id="sortable">
+            {% for participante in participantes %}
+                <li class="ui-state-default" value="{{participante.getId}}"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>{{participante.getNombre}}</li>
+                {% endfor %}
+        </ul>
+        <input type="text" name="usuarioId">
+        <input type="hidden" name="participantesIds" id="participantesIds">
+        <input type="submit">
+    </form>
+{% endblock %}
