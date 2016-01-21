@@ -1,0 +1,4 @@
+front:
+    resource: "@RankingFrontBundle/Controller/"
+    type:     annotation
+    prefix:   /

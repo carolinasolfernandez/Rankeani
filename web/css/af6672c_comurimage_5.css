@@ -1,0 +1,236 @@
+.modal-body {
+    padding: 0;
+    margin: 0;
+}
+
+.modal-open{
+    overflow-y: hidden;
+}
+
+.modal-header{
+    padding: 5px 15px;
+}
+
+.modal-header .close{
+    margin-top: 0px;
+    padding-top: 5px;
+}
+
+.modal-header h3{
+    margin: 0;
+    padding: 10px 0 5px 0;
+}
+
+.nav{
+    display: table;
+    margin-bottom: 0;
+    width: 100%;
+    list-style: none;
+    background: #333;
+    border-radius: 5px 5px 0 0;
+}
+
+.nav > li > a:hover{
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.nav.nav-pills{
+    display: none;
+}
+
+.nav-tabs:before, 
+.nav-pills:before, 
+.nav-tabs:after, 
+.nav-pills:after{
+    display: table;
+    line-height: 0;
+    content: "";
+}
+
+.nav-tabs>li, 
+.nav-pills>li{
+    float: left;
+} 
+
+.nav-pills>li>a{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.nav-pills>.active>a, 
+.nav-pills>.active>a:hover, 
+.nav-pills>.active>a:focus{
+    color: #fff;
+    background-color: #999;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.tab-content > .active{
+    display: block;
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+#image_upload_modal{
+    margin: 0 auto;
+    float: left;
+    left: 0;
+    right: 0;
+    top: 0vh;
+    overflow: hidden;
+    width: 100vw;
+    min-width: 440px;
+    max-height: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.image_upload_drop_zone{
+    background: #ddd;
+}
+
+.image_upload_drop_zone p{
+    margin: 0 auto;
+}
+
+.modal-body{
+    max-height: 100%;
+    margin: 5px !important;
+}
+
+#crop-and-use p{
+    background: #fbbf45;
+    width: auto;
+    margin: 0 0 5px 0;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+#image_upload_widget_error{
+    background: red;
+    width: auto;
+    padding: 10px;
+    margin: 0 auto;
+    opacity: 0.7;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+}
+
+.jcrop-holder{
+    margin: 0 auto;
+}
+
+.modal-footer{
+    padding: 14px 0px 0px;
+    margin: 0 auto;
+    background-color: transparent;
+    border-top: 0px solid #ddd;
+    text-align: center;
+}
+
+.modal-footer  button{
+    display: none;
+}
+
+.modal-footer .btn{
+    margin-left: 5px;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+.image-preview{
+    border: 1px solid #999;
+    bortder-radius: 3px;
+}
+
+.btn-info{
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #c1171c;
+    background-image: -moz-linear-gradient(top, #d3191f, #a51418);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#d3191f), to(#a51418));
+    background-image: -webkit-linear-gradient(top, #d3191f, #a51418);
+    background-image: -o-linear-gradient(top, #d3191f, #a51418);
+    background-image: linear-gradient(to bottom, #d3191f, #a51418);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd3191f', endColorstr='#ffa51418', GradientType=0);
+    border-color: #a51418 #a51418 #610b0e;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+.btn-info:hover, .btn-info:active, .btn-info.active, .btn-info.disabled, .btn-info[disabled]{
+    color: #ffffff;
+    background-color: #a51418;
+}
+
+.image_preview{
+    text-align: center;
+    background: grey;
+    padding: 10px
+}
+
+#image_upload_file_container .icon-white{
+    display: none;
+}
+
+[class^="icon-"],
+[class*=" icon-"]{
+    margin-top: 1px;
+    margin-left: 1px;
+    height: 15px;
+    width: 15px;
+}
+
+.gallery-image-container{
+    width: auto;
+    min-width: 0;
+    margin: 8px;
+    padding-right: 18px;
+}
+
+.gallery-image-container span.remove-image{
+    position: relative;
+    background: red;
+    line-height: normal;
+    width: 18px;
+    height: 18px;
+    top: -65px;
+    margin-left: 0;
+    margin-top: 0;
+    cursor: pointer;
+    text-align: left;
+}
+
+.image_add_button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.remove-single-image{
+    margin-top:40px;
+    position:absolute;
+    margin-left:905px;
+}
+
+.modal-dialog{
+    position: static !important;
+}
+
+#image_upload_file_container .fileinput-button{
+    height: 36px;
+    margin-bottom: 10px;
+}
+
+#image_file_upload_progress{
+    display: none;
+}
