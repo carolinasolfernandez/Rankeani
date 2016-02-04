@@ -1,0 +1,31 @@
+{% extends 'RankingFrontBundle::base.html.twig' %}
+
+{% block content %}  
+    <style>
+        #sortable { list-style-type: none; margin: 0; padding: 0; margin:auto; border:2px solid #CCC; }
+        #sortable li { padding:10px; }
+        #sortable li span { float:right; }
+        #actualizar { margin: 20px auto; display: block; } 
+    </style>
+    <section class="container" id="main">
+        <div class="row">
+            <div id="survey_container">
+                <div id="middle-wizard">
+                    <div class="step">
+                        <div class="row">
+                            <ul id="sortable">
+                                {% for key, participante in participantes %}
+                                    <li class="ui-state-default" value="{{participante["id"]}}">
+                                        {{(key + 1) ~ " - " ~ participante["nombre"]}} 
+                                        <span>({{participante["posicion"]|number_format(2)}})</span>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                            <input type="hidden" name="participantesIds" id="participantesIds">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

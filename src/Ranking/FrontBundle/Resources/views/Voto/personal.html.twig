@@ -1,0 +1,45 @@
+{% extends 'RankingFrontBundle::base.html.twig' %}
+
+{% block content %}  
+    <script>
+        $(document).ready(function() {
+            $("#sortable").sortable({
+                update: function(event, ui) {
+                    var array = $(this).sortable('toArray', {attribute: 'value'});
+                    $('#participantesIds').val(array);
+                }
+            });
+        })
+    </script>
+    <style>
+        #sortable { list-style-type: none; margin: 0; padding: 0; margin:auto; border:2px solid #CCC; cursor:pointer; }
+        #sortable li { padding:10px; }
+        #sortable li span { float:right; }
+        #actualizar { margin: 20px auto; display: block; } 
+    </style>
+    <section class="container" id="main">
+        <div class="row">
+            <div id="survey_container">
+                <form action="{{ path('voto_update') }}" method="POST">
+                    <div id="middle-wizard">
+                        <div class="step">
+                            <div class="row">
+                                <ul id="sortable">
+                                    {% for key, participante in participantes %}
+                                        <li class="ui-state-default" value="{{participante["id"]}}">
+                                            {{(key + 1) ~ " - " ~ participante["nombre"]}} 
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="submit step" id="complete">
+                        <input type="hidden" name="participantesIds" id="participantesIds">
+                        <button type="submit" name="process" class="submit">Actualizar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}

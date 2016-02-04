@@ -1,1 +1,202 @@
 {% extends '::base.html.twig' %}
+
+{% block header %}
+    <section id="top-area">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-xs-3" id="logo"><a href="index.html">Annova Survey template</a></div>
+                    <div class="btn-responsive-menu"> <span class="bar"></span> <span class="bar"></span> <span class="bar"></span> </div>
+                    <nav class="col-md-8 col-xs-9" id="top-nav">
+                        <ul>
+                            <li><a href="{{ path('voto_personal') }}">Ranking personal</a></li>
+                            <li><a href="{{ path('voto_general') }}">Ranking general</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 main-title">
+                    <h1>Rankeani</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block footer %}
+    <section class="container" id="main">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 add_bottom_30 box">
+                <p><img src="http://www.ansonika.com/annova/img/icon-1.png" alt="Icon"></p>
+                <h3>Fully responsive</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.
+                </p>
+                <a href="#" title="read more" class="button_medium_2">Read more</a>
+            </div>
+            <div class="col-md-4 col-sm-4 add_bottom_30 box">
+                <p><img src="http://www.ansonika.com/annova/img/icon-2.png" alt="Icon"></p>
+                <h3>Useful survey data</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.
+                </p>
+                <a href="#" title="read more" class="button_medium_2">Read more</a>
+            </div>
+            <div class="col-md-4 col-sm-4 add_bottom_30 box">
+                <p><img src="http://www.ansonika.com/annova/img/icon-3.png" alt="Icon"></p>
+                <h3>Receive it by email</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.
+                </p>
+                <a href="#" title="read more" class="button_medium_2">Read more</a>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Question and answer<span>This help us to improve our service and customer satisfaction.</span></h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="question_box">
+                    <h3>No sit debitis meliore postulant, per ex prompta alterum sanctus?</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="question_box">
+                    <h3>Autem putent singulis usu ea, bonorum suscipit eum?</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="question_box">
+                    <h3>Pro moderatius philosophia ad, ad mea mupercipitur?</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="question_box">
+                    <h3> Eos semper adversarium at?</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="question_box">
+                    <h3>No sit debitis meliore postulant, per ex prompta alterum sanctus?</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="question_box">
+                    <h3>Omnium voluptatibus ei duo, vim eius rebum?</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3>About us<span>This help us to improve our service and customer satisfaction.</span></h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Our History</h4>
+                <p>
+                    Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                </p>
+                <h4>Our Vision</h4>
+                <p>
+                    Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                </p>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <div class="project-item-image-container">
+                        <img src="http://www.ansonika.com/annova/img/team_1.jpg" alt=""/>
+                    </div>
+                    <div class="caption">
+                        <div class="transit-to-top">
+                            <h4 class="p-title">Patricia Doe <small>CEO</small></h4>
+                            <div class="widget_nav_menu">
+                                <ul class="social-bookmarks team">
+                                    <li class="facebook"><a href="#">facebook</a></li>
+                                    <li class="googleplus"><a href="#">googleplus</a></li>
+                                    <li class="twitter"><a href="#">twitter</a></li>
+                                    <li class="linkedin"><a href="#">linkedin</a></li>
+                                </ul>
+                                <div class="phone-info"><i class="icon-phone-sign"></i> + 4 (123) 456-7890</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <div class="project-item-image-container">
+                        <img src="http://www.ansonika.com/annova/img/team_2.jpg" alt=""/>
+                    </div>
+                    <div class="caption">
+                        <div class="transit-to-top">
+                            <h4 class="p-title">Megan Fox <small>MANAGER</small></h4>
+                            <div class="widget_nav_menu">
+                                <ul class="social-bookmarks team">
+                                    <li class="facebook"><a href="#">facebook</a></li>
+                                    <li class="googleplus"><a href="#">googleplus</a></li>
+                                    <li class="twitter"><a href="#">twitter</a></li>
+                                    <li class="linkedin"><a href="#">linkedin</a></li>
+                                </ul>
+                                <div class="phone-info">
+                                    <i class="icon-phone-sign"></i> + 4 (123) 456-7890
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <section class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>About us</h3>
+                    <p>Lorem ipsum dolor sit amet, duo iudico accusamus ne, at vix sumo alia. Usu etiam probatus ne, eu magna ullum iusto his. Nec ea case eirmod dissentiunt. Etiam denique has cu, nam quando accusamus dissentiunt ne. Ea sit malorum scribentur.</p>
+                </div>
+                <div class="col-md-4" id="contact">
+                    <h3>Contact info</h3>
+                    <p>Nec ea case eirmod dissentiunt. Etiam denique has cu, nam quando accusamus dissentiunt ne. </p> 
+                    <ul>
+                        <li><i class="icon-home"></i> 1110 Bates Avenue Los Angeles, CA 90029, US</li>
+                        <li><i class="icon-phone"></i> Telephone: 41.22.319.36.10 </li>
+                        <li><i class="icon-envelope"></i> Email: <a href="#">info@annova.com </a></li>
+                        <li><i class="icon-skype"></i> Skype name: Annova</li>
+                    </ul>    
+                </div>
+                <div class="col-md-4">
+                    <h3>Latest tweet</h3>
+                    <p>Lorem ipsum dolor sit amet, duo iudico accusamus ne, at vix sumo alia. Usu etiam probatus ne, eu magna ullum iusto his. Nec ea case eirmod dissentiunt. Etiam denique has cu, nam quando accusamus dissentiunt ne. Ea sit malorum scribentur.</p>
+                </div>
+            </div>
+        </section>
+    </footer> 
+{% endblock %}

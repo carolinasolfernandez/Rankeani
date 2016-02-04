@@ -19,14 +19,14 @@ class Voto extends BaseEntitySoftDelete {
     protected $usuario;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Participante", cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="Participante", inversedBy="votos", cascade={"persist"})
      */
     protected $participante;
 
     /**
-     * @ORM\Column(type="string", length=100, unique=true)
+     * @ORM\Column(type="integer")
      */
-    protected $valor;
+    protected $posicion;
 
     public function getUsuario() {
         return $this->usuario;
@@ -46,12 +46,12 @@ class Voto extends BaseEntitySoftDelete {
         return $this;
     }
 
-    public function getValor() {
-        return $this->valor;
+    public function getPosicion() {
+        return $this->posicion;
     }
 
-    public function setValor($valor) {
-        $this->valor = $valor;
+    public function setPosicion($posicion) {
+        $this->posicion = $posicion;
         return $this;
     }
 

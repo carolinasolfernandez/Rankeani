@@ -10,6 +10,7 @@ use Gedmo\Mapping\Annotation as GEDMO;
  * @ORM\Entity
  * @ORM\HasLifecycleCallbacks
  * @GEDMO\SoftDeleteable(fieldName="deletedAt")
+ * @ORM\Entity(repositoryClass="Ranking\FrontBundle\Repository\ParticipanteRepository")
  */
 class Participante extends BaseEntitySoftDelete {
 
@@ -18,6 +19,11 @@ class Participante extends BaseEntitySoftDelete {
      */
     protected $nombre;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Voto", mappedBy="participante", cascade={"persist"})
+     */
+    protected $votos;
+
     public function getNombre() {
         return $this->nombre;
     }
@@ -25,6 +31,19 @@ class Participante extends BaseEntitySoftDelete {
     public function setNombre($nombre) {
         $this->nombre = $nombre;
         return $this;
+    }
+    
+    public function addVoto(Voto $voto) {
+        $this->votos[] = $voto;
+        return $this;
+    }
+
+    public function getTarifasConceptosFacturables() {
+        return $this->votos;
+    }
+    
+    public function removeVoto(Voto $voto) {
+        $this->votos->removeElement($voto);
     }
 
 }
