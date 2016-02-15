@@ -14,6 +14,5 @@
 !var/logs/.gitkeep
 /build/
 /vendor/
-/bin/
 /nbproject/private/
 /nbproject/
